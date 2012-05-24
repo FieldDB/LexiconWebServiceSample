@@ -1,7 +1,7 @@
 var express = require('express');
 var fs = require('fs');
 var _ = require('underscore');
-var natural = require('natural');
+//Not availible on heroku var natural = require('natural');
 var app = express.createServer(express.logger());
 
 app.get('/',function(req,res){
@@ -12,7 +12,6 @@ app.get('/',function(req,res){
 app.get('/train',function(req,res){
   res.writeHead(200, {'Content-Type': 'text/plain'});
   res.end('This lexicon is training.\n');
-  tfidf = new natural.TfIdf();
 
 
 });
